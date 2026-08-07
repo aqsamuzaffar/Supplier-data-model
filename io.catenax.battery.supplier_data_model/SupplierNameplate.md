@@ -4,14 +4,14 @@ All 13 IDTA properties are kept and referenced as-is; only optional/mandatory is
 
 | IDTA 02035-1 attribute                     | Our model           | Note                                                                                     |
 | ------------------------------------------ | ------------------- | ---------------------------------------------------------------------------------------- |
-| URIOfTheProduct                            | **mandatory** | mandatory                                                                                |
+| URIOfTheProduct                            | **mandatory** | mandatory,  will be used for "Product Identification                                           |
 | SerialNumber                               | optional            | optional                                                                                 |
-| ManufacturerIdentifier                     | **mandatory** | BPNL                                                                                     |
+| ManufacturerIdentifier                     | **mandatory** |Mandatory in IDTA/Catena-X Battery Pass Model, and also relevant for suppliers                 |
 | DateOfManufacture                          | optional            | relevance for suppliers along the value chain difficult to determine                     |
 | DateOfPuttingIntoService                   | optional            | optional in IDTA/Catena-X as well                                                        |
 | BatteryStatus (payload "LifeCycleStage")   | optional            | not relevant for suppliers                                                               |
 | OperatorIdentifier                         | optional            | optional in IDTA/Catena-X as well                                                        |
-| ManufacturerName                           | **mandatory** | BPNL                                                                                     |
+| ManufacturerName                           | **mandatory** | Mandatory in IDTA/Catena-X Battery Pass Model, and also relevant for suppliers                 |
 | UniqueFacilityIdentifier                   | optional            | not relevant for OEMs to receive from suppliers for the battery passport                 |
 | AddressInformation                         | optional            | not relevant for OEMs to receive from suppliers for the battery passport                 |
 | Markings                                   | optional            | –                                                                                       |
@@ -23,14 +23,14 @@ All 13 IDTA properties are kept and referenced as-is; only optional/mandatory is
 
 ```
 SupplierNameplate
- ├─ URIOfTheProduct                        (optional)
+ ├─ URIOfTheProduct                        (mandatory)
  ├─ SerialNumber                           (optional)
  ├─ ManufacturerIdentifier                 (mandatory, BPNL)
  ├─ DateOfManufacture                      (optional)
  ├─ DateOfPuttingIntoService               (optional)
  ├─ BatteryStatus                          (optional, payload "LifeCycleStage")
  ├─ OperatorIdentifier                     (optional)
- ├─ ManufacturerName                       (mandatory, BPNL)
+ ├─ ManufacturerName                       (mandatory, company XYZ)
  ├─ UniqueFacilityIdentifier               (optional)
  ├─ AddressInformation                     (optional)
  ├─ Markings                               (optional)
